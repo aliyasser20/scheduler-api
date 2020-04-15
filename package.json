@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./src/index.js",
     "error": "TEST_ERROR=true node ./src/index.js",
-    "reset": "psql -U development -d scheduler_development < ./src/db/schema/create.sql && psql -U development -d scheduler_development < ./src/db/schema/development.sql"
+    "reset": "node src/db/resetdb.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "express": "^4.16.4",
     "helmet": "^3.18.0",
     "pg": "^7.8.1",
+    "pg-native": "^3.0.0",
     "socket.io": "^2.2.0",
     "ws": "^7.0.0"
   },
